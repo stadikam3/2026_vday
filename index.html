@@ -153,9 +153,14 @@
             position: fixed;
             inset: 0;
             display: none;
-            place-items: center;
-            padding: 24px;
-            background: rgba(0, 0, 0, 0.35);
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 24px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('simrandsuraj_engagement.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .modal.show {
@@ -164,24 +169,13 @@
 
         .modalContent {
             width: min(520px, 100%);
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             border-radius: 24px;
             padding: 22px;
             box-shadow: var(--shadow);
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .modalContent::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: url('simrandsuraj_engagement.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.3;
-            z-index: -1;
         }
 
         .modalContent h2 {
